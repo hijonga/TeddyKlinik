@@ -10,7 +10,7 @@ import android.widget.VideoView
 import android.net.Uri
 import android.view.View
 
-class EKGVideoActivity : AppCompatActivity() {
+class EEGVideoActivity : AppCompatActivity() {
     // declaring a null variable for VideoView
     var simpleVideoView: VideoView? = null
 
@@ -19,11 +19,11 @@ class EKGVideoActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_ekgvideo)
+        setContentView(R.layout.activity_eegvideo)
 
         // assigning id of VideoView from
         // activity_main.xml layout file
-        simpleVideoView = findViewById<View>(R.id.EKGVideoView) as VideoView
+        simpleVideoView = findViewById<View>(R.id.EEGVideoView) as VideoView
 
         if (mediaControls == null) {
             // creating an object of media controller class
@@ -33,13 +33,12 @@ class EKGVideoActivity : AppCompatActivity() {
             mediaControls!!.setAnchorView(this.simpleVideoView)
         }
 
-
         // set the media controller for video view
         //simpleVideoView!!.setMediaController(mediaControls)
 
         // set the absolute path of the video file which is going to be played
         simpleVideoView!!.setVideoURI(Uri.parse("android.resource://"
-                + packageName + "/" + R.raw.ecg_monitor_1))
+                + packageName + "/" + R.raw.eeg_video))
 
         simpleVideoView!!.requestFocus()
 
@@ -56,13 +55,15 @@ class EKGVideoActivity : AppCompatActivity() {
             false
         }
 
+        getIntent().getIntExtra("")
+
         // Video player
         //var mediaPlayer = MediaPlayer.create(this, R.raw.dancing_bear)
         //mediaPlayer.start()
     }
-    fun backToEKG(view: View) {
-        val intent = Intent(this, EKGActivity::class.java).apply{}
+
+    fun backToOverview(view: View) {
+        val intent = Intent(this, EEGActivity::class.java).apply{}
         startActivity(intent)
     }
-
 }

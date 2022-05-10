@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -14,4 +15,13 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, EKGActivity::class.java).apply{}
         startActivity(intent)
     }
+    fun openEEG(view: View) {
+        val intent = Intent(this, EEGActivity::class.java).apply{}
+        startActivity(intent)
+    }
+    fun openSono(view: View) {
+        val intent = Intent(this, SonoActivity::class.java).apply{}
+        startActivity(intent)
+    }
+
 }

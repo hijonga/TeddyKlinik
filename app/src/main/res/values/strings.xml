@@ -4,4 +4,7 @@
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="title_activity_ekgvideo">EKGVideoActivity</string>
+    <string name="title_activity_sono">SonoActivity</string>
+    <string name="title_activity_sono_video1">SonoVideo1Activity</string>
+    <string name="title_activity_eegvideo">EEGVideoActivity</string>
 </resources>

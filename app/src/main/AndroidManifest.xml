@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.teddykrankenhaus" >
+    package="com.example.teddykrankenhaus">
 
     <application
         android:allowBackup="true"
@@ -8,7 +8,28 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TeddyKrankenhaus" >
+        android:theme="@style/Theme.TeddyKrankenhaus">
+        <activity
+            android:name=".EEGVideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:label="@string/title_activity_eegvideo"
+            android:theme="@style/Theme.TeddyKrankenhaus.Fullscreen" />
+        <activity
+            android:name=".SonoVideo1Activity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:label="@string/title_activity_sono_video1"
+            android:theme="@style/Theme.TeddyKrankenhaus.Fullscreen" />
+        <activity
+            android:name=".SonoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:label="@string/title_activity_sono"
+            android:theme="@style/Theme.TeddyKrankenhaus.Fullscreen" />
+        <activity
+            android:name=".EEGActivity"
+            android:exported="true" />
         <activity
             android:name=".EKGVideoActivity"
             android:exported="true" />
@@ -20,7 +41,7 @@
             android:theme="@style/Theme.TeddyKrankenhaus.Fullscreen" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="?attr/fullscreenBackgroundColor"
     android:theme="@style/ThemeOverlay.TeddyKrankenhaus.FullscreenContainer"
-    tools:context=".EKGActivity">
+    tools:context=".SonoActivity">
 
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
@@ -44,7 +44,7 @@
             android:layout_marginRight="100dp"
             android:layout_marginBottom="100dp"
             android:contentDescription="Screensaver"
-            android:onClick="openEKGVideo"
+            android:onClick="backToMain"
             app:layout_constraintBottom_toTopOf="@+id/textView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -67,8 +67,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="39dp"
-            android:text="Elektrokardiogramm (EKG)"
-            android:textAlignment="center"
+            android:text="Sonographie"
             android:textAppearance="@style/TextAppearance.AppCompat.Display2"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -76,6 +75,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_margin="20dp"
+            android:onClick="openSonoVideo"
+            android:text="Niere"
+            app:layout_constraintBottom_toTopOf="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

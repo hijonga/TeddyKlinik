@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="?attr/fullscreenBackgroundColor"
     android:theme="@style/ThemeOverlay.TeddyKrankenhaus.FullscreenContainer"
-    tools:context=".EKGActivity">
+    tools:context=".EEGActivity">
 
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
@@ -44,7 +44,7 @@
             android:layout_marginRight="100dp"
             android:layout_marginBottom="100dp"
             android:contentDescription="Screensaver"
-            android:onClick="openEKGVideo"
+            android:onClick="openEEGVideo"
             app:layout_constraintBottom_toTopOf="@+id/textView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -67,7 +67,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="39dp"
-            android:text="Elektrokardiogramm (EKG)"
+            android:text="Elektroenzephalographie (EEG)"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Display2"
             android:textColor="@color/white"
