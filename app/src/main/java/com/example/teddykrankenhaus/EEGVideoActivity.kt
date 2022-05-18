@@ -55,8 +55,6 @@ class EEGVideoActivity : AppCompatActivity() {
             false
         }
 
-        getIntent().getIntExtra("")
-
         // Video player
         //var mediaPlayer = MediaPlayer.create(this, R.raw.dancing_bear)
         //mediaPlayer.start()

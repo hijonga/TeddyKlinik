@@ -15,8 +15,24 @@ class SonoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sono)
     }
-    fun openSonoVideo(view: View) {
-        val intent = Intent(this, SonoVideo1Activity::class.java).apply{}
+    fun openSonoVideo1(view: View) {
+        val intent = Intent(this, VideoActivity::class.java).apply{}
+        intent.putExtra("VideoFile", R.raw.sono_niere)
+        startActivity(intent)
+    }
+    fun openSonoVideo2(view: View) {
+        val intent = Intent(this, VideoActivity::class.java).apply{}
+        intent.putExtra("VideoFile", R.raw.lebervenen)
+        startActivity(intent)
+    }
+    fun openSonoVideo3(view: View) {
+        val intent = Intent(this, VideoActivity::class.java).apply{}
+        intent.putExtra("VideoFile", R.raw.shunt)
+        startActivity(intent)
+    }
+    fun openSonoVideo4(view: View) {
+        val intent = Intent(this, VideoActivity::class.java).apply{}
+        intent.putExtra("VideoFile", R.raw.finger)
         startActivity(intent)
     }
     fun backToMain(view: View) {

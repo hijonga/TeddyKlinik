@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SonoVideo1Activity">
+    tools:context=".VideoActivity">
 
     <VideoView
-        android:id="@+id/SonoVideoView"
+        android:id="@+id/VideoView"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -21,8 +21,8 @@
         android:layout_height="70dp"
         android:backgroundTint="#002F3233"
         android:contentDescription="back"
-        android:onClick="backToSono"
-        android:tint="@color/Air_Sup_Blue"
+        android:onClick="backToMain"
+        :tint="@color/Air_Sup_Blue"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/abc_vector_test" />

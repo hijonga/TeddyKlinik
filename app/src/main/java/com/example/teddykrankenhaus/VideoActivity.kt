@@ -1,7 +1,6 @@
 package com.example.teddykrankenhaus
 
 import android.content.Intent
-import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.MediaController
@@ -10,7 +9,7 @@ import android.widget.VideoView
 import android.net.Uri
 import android.view.View
 
-class SonoVideo1Activity : AppCompatActivity() {
+class VideoActivity : AppCompatActivity() {
     // declaring a null variable for VideoView
     var simpleVideoView: VideoView? = null
 
@@ -19,11 +18,11 @@ class SonoVideo1Activity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sono_video1)
+        setContentView(R.layout.activity_video)
 
         // assigning id of VideoView from
         // activity_main.xml layout file
-        simpleVideoView = findViewById<View>(R.id.SonoVideoView) as VideoView
+        simpleVideoView = findViewById<View>(R.id.VideoView) as VideoView
 
         if (mediaControls == null) {
             // creating an object of media controller class
@@ -35,10 +34,16 @@ class SonoVideo1Activity : AppCompatActivity() {
 
         // set the media controller for video view
         //simpleVideoView!!.setMediaController(mediaControls)
+        var intent: Intent
+        intent = getIntent()
 
+        val videoFile = intent.getIntExtra("VideoFile",0)
         // set the absolute path of the video file which is going to be played
         simpleVideoView!!.setVideoURI(Uri.parse("android.resource://"
-                + packageName + "/" + R.raw.sono_niere))
+                + packageName + "/" + videoFile))
+        //simpleVideoView!!.setVideoPath("android.resource://"
+          //     + packageName + "/" + videoFile)
+
 
         simpleVideoView!!.requestFocus()
 
@@ -59,8 +64,9 @@ class SonoVideo1Activity : AppCompatActivity() {
         //var mediaPlayer = MediaPlayer.create(this, R.raw.dancing_bear)
         //mediaPlayer.start()
     }
-    fun backToSono(view: View) {
+    fun backToMain(view: View) {
         val intent = Intent(this, SonoActivity::class.java).apply{}
         startActivity(intent)
     }
 }
+
