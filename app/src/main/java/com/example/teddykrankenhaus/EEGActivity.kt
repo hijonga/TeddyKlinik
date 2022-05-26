@@ -15,6 +15,10 @@ class EEGActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_eeg)
     }
+    override fun onBackPressed() {
+        val intent = Intent(this, MainActivity::class.java).apply{}
+        startActivity(intent)
+    }
     fun openEEGVideo(view: View) {
         val intent = Intent(this, EEGVideoActivity::class.java).apply{}
         startActivity(intent)

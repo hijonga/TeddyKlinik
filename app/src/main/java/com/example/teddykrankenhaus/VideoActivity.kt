@@ -1,12 +1,15 @@
 package com.example.teddykrankenhaus
 
 import android.content.Intent
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.MediaController
+
 import android.widget.Toast
 import android.widget.VideoView
 import android.net.Uri
+import android.provider.MediaStore
 import android.view.View
 
 class VideoActivity : AppCompatActivity() {
@@ -15,6 +18,8 @@ class VideoActivity : AppCompatActivity() {
 
     // declaring a null variable for MediaController
     var mediaControls: MediaController? = null
+
+    private var mediaPlayer: MediaPlayer? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,11 +43,12 @@ class VideoActivity : AppCompatActivity() {
         intent = getIntent()
 
         val videoFile = intent.getIntExtra("VideoFile",0)
+
+
         // set the absolute path of the video file which is going to be played
         simpleVideoView!!.setVideoURI(Uri.parse("android.resource://"
                 + packageName + "/" + videoFile))
-        //simpleVideoView!!.setVideoPath("android.resource://"
-          //     + packageName + "/" + videoFile)
+
 
 
         simpleVideoView!!.requestFocus()
@@ -57,8 +63,14 @@ class VideoActivity : AppCompatActivity() {
         simpleVideoView!!.setOnErrorListener { mp, what, extra ->
             Toast.makeText(applicationContext, "An Error Occured " +
                     "While Playing Video !!!", Toast.LENGTH_LONG).show()
-            false
-        }
+            false}
+
+        val audioFile = intent.getIntExtra("AudioFile",0)
+        mediaPlayer = MediaPlayer.create(this, audioFile)
+        mediaPlayer?.setOnPreparedListener { it.isLooping = true }
+
+        mediaPlayer?.start()
+
 
         // Video player
         //var mediaPlayer = MediaPlayer.create(this, R.raw.dancing_bear)
@@ -67,6 +79,7 @@ class VideoActivity : AppCompatActivity() {
     fun backToMain(view: View) {
         val intent = Intent(this, SonoActivity::class.java).apply{}
         startActivity(intent)
+        mediaPlayer?.stop()
     }
 }
 

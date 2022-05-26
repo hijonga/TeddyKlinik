@@ -35,21 +35,34 @@
         android:onClick="openEKG"
         android:text="EKG"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/EEG"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/Mikroskop"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="100dp"
+        android:onClick="openMicroscope"
+        android:text="Mikroskop"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toEndOf="@id/Sono"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
         android:id="@+id/EEG"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="100dp"
         android:backgroundTint="@color/prussian_Blue"
         android:onClick="openEEG"
         android:text="EEG"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintEnd_toStartOf="@+id/EKG"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/EKG"
+        app:layout_constraintEnd_toStartOf="@id/Sono"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
@@ -61,8 +74,8 @@
         android:onClick="openSono"
         android:text="Sono"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/EKG"
+        app:layout_constraintEnd_toStartOf="@+id/Mikroskop"
+        app:layout_constraintStart_toEndOf="@+id/EEG"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

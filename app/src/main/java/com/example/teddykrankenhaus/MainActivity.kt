@@ -23,5 +23,9 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, SonoActivity::class.java).apply{}
         startActivity(intent)
     }
+    fun openMicroscope(view: View) {
+        val intent = Intent(this, MicroscopeActivity::class.java).apply{}
+        startActivity(intent)
+    }
 
 }

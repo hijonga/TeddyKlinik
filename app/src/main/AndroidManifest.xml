@@ -28,11 +28,21 @@
             android:label="@string/title_activity_sono"
             android:theme="@style/Theme.TeddyKrankenhaus.Fullscreen" />
         <activity
+            android:name=".MicroscopeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:theme="@style/Theme.TeddyKrankenhaus.Fullscreen" />
+        <activity
             android:name=".EEGActivity"
             android:exported="true" />
         <activity
             android:name=".EKGVideoActivity"
             android:exported="true" />
+        <activity
+            android:name=".PictureActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:theme="@style/Theme.TeddyKrankenhaus.Fullscreen" />
         <activity
             android:name=".EKGActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"

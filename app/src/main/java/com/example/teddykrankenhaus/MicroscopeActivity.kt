@@ -9,35 +9,27 @@ import android.view.View
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
-class SonoActivity : AppCompatActivity() {
+class MicroscopeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sono)
+        setContentView(R.layout.activity_microscope)
     }
     override fun onBackPressed() {
         val intent = Intent(this, MainActivity::class.java).apply{}
         startActivity(intent)
     }
-    fun openSonoVideo1(view: View) {
-        val intent = Intent(this, VideoActivity::class.java).apply{}
-        intent.putExtra("VideoFile", R.raw.sono_niere)
-        intent.putExtra("parentActivity", "SonoActivity")
+
+    fun openPicture(view: View){
+        val intent = Intent(this, PictureActivity::class.java).apply{}
+        //intent.putExtra("VideoFile", R.raw.bakterien)
         startActivity(intent)
     }
-    fun openSonoVideo2(view: View) {
+
+    fun openVideo(view: View) {
         val intent = Intent(this, VideoActivity::class.java).apply{}
-        intent.putExtra("VideoFile", R.raw.lebervenen)
-        startActivity(intent)
-    }
-    fun openSonoVideo3(view: View) {
-        val intent = Intent(this, VideoActivity::class.java).apply{}
-        intent.putExtra("VideoFile", R.raw.shunt)
-        startActivity(intent)
-    }
-    fun openSonoVideo4(view: View) {
-        val intent = Intent(this, VideoActivity::class.java).apply{}
-        intent.putExtra("VideoFile", R.raw.finger)
+        intent.putExtra("VideoFile", R.raw.bakterien)
+        intent.putExtra("ActivityToGoBackTo", "MicroscopeActivity")
         startActivity(intent)
     }
     fun backToMain(view: View) {
