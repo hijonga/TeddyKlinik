@@ -15,15 +15,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/backToSono"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:backgroundTint="#002F3233"
-        android:contentDescription="back"
-        android:onClick="backToMain"
-        :tint="@color/Air_Sup_Blue"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/abc_vector_test" />
 </androidx.constraintlayout.widget.ConstraintLayout>

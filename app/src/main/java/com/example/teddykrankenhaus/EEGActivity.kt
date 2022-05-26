@@ -20,7 +20,8 @@ class EEGActivity : AppCompatActivity() {
         startActivity(intent)
     }
     fun openEEGVideo(view: View) {
-        val intent = Intent(this, EEGVideoActivity::class.java).apply{}
+        val intent = Intent(this, VideoActivity::class.java).apply{}
+        intent.putExtra("VideoFile", R.raw.eeg_video)
         startActivity(intent)
     }
     fun backToMain(view: View) {

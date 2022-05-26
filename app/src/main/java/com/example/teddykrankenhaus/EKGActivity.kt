@@ -23,8 +23,7 @@ class EKGActivity : AppCompatActivity() {
 
     fun openEKGVideo(view: View) {
         val intent = Intent(this, VideoActivity::class.java).apply{}
-        intent.putExtra("VideoFile", R.raw.ecg_monitor_1)
-        intent.putExtra("AudioFile", R.raw.heart_rate)
+        intent.putExtra("VideoFile", R.raw.ecg_monitor_2)
         startActivity(intent)
     }
     fun backToMain(view: View) {

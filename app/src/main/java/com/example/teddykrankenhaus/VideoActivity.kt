@@ -19,7 +19,7 @@ class VideoActivity : AppCompatActivity() {
     // declaring a null variable for MediaController
     var mediaControls: MediaController? = null
 
-    private var mediaPlayer: MediaPlayer? = null
+    //private var mediaPlayer: MediaPlayer? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,21 +65,18 @@ class VideoActivity : AppCompatActivity() {
                     "While Playing Video !!!", Toast.LENGTH_LONG).show()
             false}
 
-        val audioFile = intent.getIntExtra("AudioFile",0)
-        mediaPlayer = MediaPlayer.create(this, audioFile)
-        mediaPlayer?.setOnPreparedListener { it.isLooping = true }
 
-        mediaPlayer?.start()
+        //val audioFile = intent.getIntExtra("AudioFile",0)
+        //mediaPlayer = MediaPlayer.create(this, audioFile)
+        //mediaPlayer?.setOnPreparedListener { it.isLooping = true }
+
+        //mediaPlayer?.start()
 
 
         // Video player
         //var mediaPlayer = MediaPlayer.create(this, R.raw.dancing_bear)
         //mediaPlayer.start()
     }
-    fun backToMain(view: View) {
-        val intent = Intent(this, SonoActivity::class.java).apply{}
-        startActivity(intent)
-        mediaPlayer?.stop()
-    }
+
 }
 
