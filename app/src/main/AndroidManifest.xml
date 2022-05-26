@@ -10,44 +10,40 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TeddyKrankenhaus">
         <activity
-            android:name=".EEGVideoActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:exported="false"
-            android:label="@string/title_activity_eegvideo"
-            android:theme="@style/Theme.TeddyKrankenhaus.Fullscreen" />
-        <activity
             android:name=".VideoActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="false"
-            android:label="@string/title_activity_sono_video1"
+            android:screenOrientation="landscape"
             android:theme="@style/Theme.TeddyKrankenhaus.Fullscreen" />
         <activity
             android:name=".SonoActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="false"
+            android:screenOrientation="landscape"
             android:label="@string/title_activity_sono"
             android:theme="@style/Theme.TeddyKrankenhaus.Fullscreen" />
         <activity
             android:name=".MicroscopeActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape"
             android:exported="false"
             android:theme="@style/Theme.TeddyKrankenhaus.Fullscreen" />
         <activity
             android:name=".EEGActivity"
-            android:exported="true" />
-        <activity
-            android:name=".EKGVideoActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:screenOrientation="landscape"/>
         <activity
             android:name=".PictureActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="false"
+            android:screenOrientation="landscape"
             android:theme="@style/Theme.TeddyKrankenhaus.Fullscreen" />
         <activity
             android:name=".EKGActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="true"
             android:label="@string/title_activity_ekg"
+            android:screenOrientation="landscape"
             android:theme="@style/Theme.TeddyKrankenhaus.Fullscreen" />
         <activity
             android:name=".MainActivity"
