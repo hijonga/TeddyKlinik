@@ -19,8 +19,9 @@ class PictureActivity : AppCompatActivity() {
 
     fun openVideo(view: View) {
         val intent = Intent(this, VideoActivity::class.java).apply{}
-        intent.putExtra("VideoFile", R.raw.bakterien)
+        intent.putExtra("VideoFile", R.raw.bacteria)
         startActivity(intent)
+        overridePendingTransition(0,0)
     }
     fun backToMain(view: View) {
         val intent = Intent(this, MicroscopeActivity::class.java).apply{}

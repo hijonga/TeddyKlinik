@@ -26,12 +26,12 @@ class MicroscopeActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun openVideo(view: View) {
+/*    fun openVideo(view: View) {
         val intent = Intent(this, VideoActivity::class.java).apply{}
         intent.putExtra("VideoFile", R.raw.bakterien)
         intent.putExtra("ActivityToGoBackTo", "MicroscopeActivity")
         startActivity(intent)
-    }
+    }*/
     fun backToMain(view: View) {
         val intent = Intent(this, MainActivity::class.java).apply{}
         startActivity(intent)
